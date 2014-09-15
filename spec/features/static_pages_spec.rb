@@ -40,6 +40,13 @@ describe "Static pages" do
     end
   end
 
+  #See Hartl Listing 3.13
+  describe "About page" do
 
+    it "should have the content 'USMA CS450 Sample App About'" do
+      visit '/static_pages/about'
+      expect(page).to have_content('USMA CS450 Sample App About')
+    end
+  end
 
 end 
