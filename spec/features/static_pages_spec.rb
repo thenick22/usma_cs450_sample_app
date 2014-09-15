@@ -13,6 +13,7 @@ RSpec.describe "StaticPages", :type => :request do
   end
 end
 
+#See Hartl Listing 3.9
 describe "Static pages" do
 
   describe "Home page" do
