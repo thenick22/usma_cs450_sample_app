@@ -13,9 +13,10 @@ RSpec.describe "StaticPages", :type => :request do
   end
 end
 
-#See Hartl Listing 3.9
+
 describe "Static pages" do
 
+  #See Hartl Listing 3.9
   describe "Home page" do
 
     it "should have the content 'USMA CS450 Sample App'" do
@@ -29,4 +30,16 @@ describe "Static pages" do
       expect(page).to have_content('USMA CS450 Sample App')
     end
   end
+
+  #See Hartl Listing 3.11
+  describe "Help page" do
+
+    it "should have the content 'USMA CS450 Sample App Help'" do
+      visit '/static_pages/help'
+      expect(page).to have_content('USMA CS450 Sample App Help')
+    end
+  end
+
+
+
 end 
