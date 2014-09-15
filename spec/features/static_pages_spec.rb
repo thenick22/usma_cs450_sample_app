@@ -18,7 +18,7 @@ describe "Static pages" do
 
   describe "Home page" do
 
-    it "should have the content 'Sample App'" do
+    it "should have the content 'USMA CS450 Sample App'" do
       visit '/static_pages/home'
       #notice that the old test format is commented out
       #page.should have_content('Sample App')
@@ -26,7 +26,7 @@ describe "Static pages" do
       #comments like the above should not be included in production code.
       #Instead we should rely on the revision control system to caputre this
       #kind of information outside of the code.
-      expect(page).to have_content('Sample App')
+      expect(page).to have_content('USMA CS450 Sample App')
     end
   end
 end 
