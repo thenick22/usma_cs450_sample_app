@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
@@ -17,6 +16,10 @@ end
 group :production do
 	gem 'pg'
 end
+
+#Added tzinfo-data to include timezone data on Windows boxes
+#See: https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
+gem 'tzinfo-data'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
