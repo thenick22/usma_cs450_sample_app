@@ -22,7 +22,7 @@ end
 
 describe "Static pages" do
 
-	let(:base_title) { "USMA CS450 Sample App" }
+	let(:base_title) { "USMA CS450" }
 	
   #See Hartl Listing 3.18
   describe "Home page" do

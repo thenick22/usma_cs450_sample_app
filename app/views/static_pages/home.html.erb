@@ -1,9 +1,19 @@
-<!-- See Hartl Listing 3.26 -->
+<!-- See Hartl Listing 5.2 -->
 <% provide(:title, 'Home') %>
-<h1>USMA CS450 Sample App</h1>
-<p>
-  This is the home page for the
-  <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
 
+<div class="center hero-unit"> 
+  <h1>USMA CS450 Sample App</h1> 
+
+  <h2> 
+    This is the home page for the USMA CS450 Sample Application. 
+  </h2> 
+ <div>
+	<p>This application is directly
+	derived from the <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a> 
+    sample application.</p>
+ </div>
+  	
+  <%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %> 
+</div> 
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
