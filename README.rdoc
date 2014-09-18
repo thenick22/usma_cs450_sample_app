@@ -11,17 +11,18 @@ heroku-toolbelt/3.11.1 (x86_64-linux) ruby/1.9.3
 
 * Setup your development and test environment
 After cloneing you will need to configure the application for your
-development environment.
+development environment with:
+<tt>bundle install --without production</tt>
 
 * How to run the test suite
 The test suite is RSpec based.  To run the existing test cases use:
-<tt>bundle exec rspec spec/requests/static_pages_spec.rb</tt>
+<tt>bundle exec rspec spec</tt>
 
 * Deployment instructions
 You will need to setup your own instance of a heroku environment.  
 <tt>heroku create --stack cedar</tt>
 
-Deploy to the production environment on the heroku servers using:
+* Deploy to your production environment on the heroku servers using:
 <tt>git push heroku master</tt>
 
 
