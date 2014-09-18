@@ -17,6 +17,7 @@ end
 
 group :production do
 	gem 'pg'
+	gem 'rails_12factor' #See: https://devcenter.heroku.com/articles/rails-4-asset-pipeline
 end
 
 #Added tzinfo-data to include timezone data on Windows boxes
