@@ -43,7 +43,7 @@ describe "Static pages" do
     end
 	it "should have the title 'Help'" do
 		visit help_path
-		expect(page).to have_title "#{base_title} |  Help"
+		expect(page).to have_title "#{base_title} | Help"
 	end
   end
 
