@@ -10,14 +10,16 @@ heroku-toolbelt/3.11.1 (x86_64-linux) ruby/1.9.3
 
 * Setup your development and test environment
 1. After cloneing you will need to configure the application for your
-development environment and ensure the database is migrated.
-a. <tt>bundle install --without production</tt>
-b. <tt>bundle exec rake db:migrate</tt>
+development environment.
+<tt>bundle install --without production</tt>
 
-2. Next run the test suite.  It is is RSpec based.  To run all existing test cases in the spec directory use:
+2. Then migrate any existing database schema.
+<tt>bundle exec rake db:migrate</tt>
+
+3. Next run the test suite.  It is is RSpec based.  To run all existing test cases in the spec directory use:
 <tt>bundle exec rspec spec</tt>
 
-3. You'll want to setup your own remote repository on GitHub.  Remove the current origin with
+4. You'll want to setup your own remote repository on GitHub.  Remove the current origin with
 <tt>git remote rm origin</tt>.  Then create an empty repository on GitHub.  Finally, add an origin nickname back in for your remote repository on GitHub.
 
 * Deployment into production environment
