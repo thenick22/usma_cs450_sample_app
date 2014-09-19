@@ -11,21 +11,26 @@ This is the USMA CS450 Sample Application for In-Class Exercises.
 == Setup your development and test environment
 * After cloneing you will need to configure the application for your
 development environment.
- <tt>bundle install --without production</tt>
+ bundle install --without production
 
 * Then migrate any existing database schema.
-<tt>bundle exec rake db:migrate</tt>
+ bundle exec rake db:migrate
 
 * Next run the test suite.  It is is RSpec based.  To run all existing test cases in the spec directory use:
-<tt>bundle exec rspec spec</tt>
+ bundle exec rspec spec
 
 * You'll want to setup your own remote repository on GitHub.  Remove the current origin with
-<tt>git remote rm origin</tt>.  Then create an empty repository on GitHub.  Finally, add an origin nickname back in for your remote repository on GitHub.
+ git remote rm origin
+  
+* Then create an empty repository on GitHub.  Finally, add an origin nickname back in for your remote repository on GitHub.
 
 == Deployment into production environment
-You will need to setup your own instance of a heroku environment.  
-<tt>heroku create --stack cedar</tt>. Deploy to your production environment on the heroku servers using:
-<tt>git push heroku master</tt>.  If you need to perform a database migration on heroku you'll need to use <tt>heroku run:detached rake db:migrate</tt>.
+* You will need to setup your own instance of a heroku environment.  
+ heroku create --stack cedar
+* Deploy to your production environment on the heroku servers using:
+ git push heroku master
+* If you need to perform a database migration on heroku you'll need to use:
+ heroku run:detached rake db:migrate
 
 
 
