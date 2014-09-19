@@ -2,30 +2,30 @@
 
 This is the USMA CS450 Sample Application for In-Class Exercises.
 
-* Software versions
-Ruby 1.9.3p547 (2014-05-14 revision 45962) [x86_64-linux]
-Rails 4.1.6
-gem 2.4.1
-heroku-toolbelt/3.11.1 (x86_64-linux) ruby/1.9.3
+== Software versions
+* Ruby 1.9.3p547 (2014-05-14 revision 45962) [x86_64-linux]
+* Rails 4.1.6
+* gem 2.4.1
+* heroku-toolbelt/3.11.1 (x86_64-linux) ruby/1.9.3
 
-* Setup your development and test environment
-** After cloneing you will need to configure the application for your
+== Setup your development and test environment
+* After cloneing you will need to configure the application for your
 development environment.
-<tt>bundle install --without production</tt>
+ <tt>bundle install --without production</tt>
 
-** Then migrate any existing database schema.
+* Then migrate any existing database schema.
 <tt>bundle exec rake db:migrate</tt>
 
-** Next run the test suite.  It is is RSpec based.  To run all existing test cases in the spec directory use:
+* Next run the test suite.  It is is RSpec based.  To run all existing test cases in the spec directory use:
 <tt>bundle exec rspec spec</tt>
 
-** You'll want to setup your own remote repository on GitHub.  Remove the current origin with
+* You'll want to setup your own remote repository on GitHub.  Remove the current origin with
 <tt>git remote rm origin</tt>.  Then create an empty repository on GitHub.  Finally, add an origin nickname back in for your remote repository on GitHub.
 
-* Deployment into production environment
+== Deployment into production environment
 You will need to setup your own instance of a heroku environment.  
 <tt>heroku create --stack cedar</tt>. Deploy to your production environment on the heroku servers using:
-<tt>git push heroku master</tt>.  If you need to perform a database migration on heroku you'll need to use
- <tt>heroku run:detached rake db:migrate</tt>
+<tt>git push heroku master</tt>.  If you need to perform a database migration on heroku you'll need to use <tt>heroku run:detached rake db:migrate</tt>.
+
 
 
