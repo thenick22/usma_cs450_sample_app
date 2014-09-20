@@ -27,6 +27,11 @@ development environment.
 == Deployment into production environment
 * You will need to setup your own instance of a heroku environment.  
  heroku create --stack cedar
+* Precompile assets, them commit them to local git repo and remote git repo on GitHub.
+ rake assets:precompile
+ git add .
+ git commit -m "Precompile assets"
+ git push origin
 * Deploy to your production environment on the heroku servers using:
  git push heroku master
 * If you need to perform a database migration on heroku you'll need to use:
