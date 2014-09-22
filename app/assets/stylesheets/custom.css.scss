@@ -1,5 +1,16 @@
 @import "bootstrap";
 
+/* mixins, variables, etc. */
+/*See Hartl Listing 7.2*/
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* universal */
 
 html {
@@ -25,6 +36,8 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+
 
 /* typography */
 
@@ -101,5 +114,16 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 10px;
+}
+
+/* miscellaneous */
+
+/*See Hartl Listing 7.2*/
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
 
