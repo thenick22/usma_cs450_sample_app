@@ -24,12 +24,7 @@ end
 	it{ expect(page).to have_title user.name}
   end
 
-  describe "signup page" do
-    before { visit signup_path }
 
-    it { should have_content('Sign up') }
-    it { should have_title "#{base_title} | Sign Up" }
-  end
 
   describe "signup" do
 
