@@ -1,14 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe "UserPages", :type => :request do
-  describe "GET /user_pages" do
-    it "Sign Up page exists" do
-	get signup_path
-	expect(response).to have_http_status(200)
-	end
-  end
-end
- 
  describe "User pages" do
 
   let(:base_title) { "USMA CS450" }
@@ -49,6 +40,15 @@ end
 
       it "should create a user" do
         expect { click_button submit }.to change(User, :count).by(1)
+      end
+
+      describe "after saving the user" do
+        before { click_button submit }
+        let(:user) { User.find_by(email: 'user@example.com') }
+
+        it { should have_link('Sign out') }
+        it { should have_title(user.name) }
+        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
       end
     end
   end

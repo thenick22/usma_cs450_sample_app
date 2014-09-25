@@ -31,8 +31,8 @@ GEM
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
-    bcrypt-ruby (3.0.1)
-    bcrypt-ruby (3.0.1-x86-mingw32)
+    bcrypt-ruby (3.1.2)
+    bcrypt-ruby (3.1.2-x86-mingw32)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     builder (3.2.2)
@@ -162,7 +162,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
-  bcrypt-ruby
+  bcrypt-ruby (= 3.1.2)
   bootstrap-sass (= 3.2.0.2)
   capybara
   coffee-rails (~> 4.0.0)
