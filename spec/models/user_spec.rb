@@ -20,7 +20,7 @@ describe User do
 
   describe "remember token" do
     before { @user.save }
-    it { @user.remember_token.should_not be_blank }
+    it { expect(@user.remember_token).not_to be_blank }
   end
 
   describe "when name is not present" do 
