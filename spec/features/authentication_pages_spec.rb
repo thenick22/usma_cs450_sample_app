@@ -42,7 +42,7 @@ describe "Authentication" do
         it { should have_link('Sign in') }
       end
     end
-  end
+end
 
   # We have to explicitly change the type because get, put, patch are only defined for :controller and
   # :request specs.  Because we moved this file to spec/features the RSpec framework treats it as a feature spec.
@@ -102,6 +102,5 @@ describe "Authentication" do
       end
     end
   end
-
 
 end
