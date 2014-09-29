@@ -6,7 +6,24 @@ require 'rails_helper'
 
   subject {page}	
 
-  
+  describe "index" do
+    before do
+      sign_in FactoryGirl.create(:user)
+      FactoryGirl.create(:user, name: "Bob", email: "bob@example.com")
+      FactoryGirl.create(:user, name: "Ben", email: "ben@example.com")
+      visit users_path
+    end
+
+    it { should have_title('All users') }
+    it { should have_content('All users') }
+
+    it "should list each user" do
+      User.all.each do |user|
+        expect(page).to have_selector('li', text: user.name)
+      end
+    end
+  end
+
   describe "profile page" do
 	let(:user) {FactoryGirl.create(:user)}
 	before { visit user_path(user) }
@@ -77,19 +94,21 @@ require 'rails_helper'
     end
   end
 
-  describe "edit" do
+  describe "update" do
     let(:user) { FactoryGirl.create(:user) }
-    before { visit edit_user_path(user) }
+    before do
+      sign_in user
+      visit edit_user_path(user)
+    end
 
     describe "page" do
-      it { should have_content("Update your profile") }
-      it { should have_title("Edit user") }
-      it { should have_link('change', href: 'http://gravatar.com/emails') }
+	it{ should have_selector('h1', "Update your profile") }
+	it{ expect(page).to have_title full_title("Edit user")}
+	it { should have_link('change', href: 'http://gravatar.com/emails') }
     end
 
     describe "with invalid information" do
       before { click_button "Save changes" }
-
       it { should have_content('error') }
     end
   end
