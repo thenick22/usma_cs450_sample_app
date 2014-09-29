@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.6'
 gem 'bootstrap-sass','3.2.0.2'
 gem 'bcrypt-ruby','3.1.2'
+gem 'faker'
+gem 'will_paginate'
 
 
 # Setup development, test, and production environments
